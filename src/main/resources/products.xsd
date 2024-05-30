@@ -1,0 +1,126 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://equipo3.com/clases"
+           targetNamespace="http://equipo3.com/clases" elementFormDefault="qualified">
+
+    <!--Obtener producto-->
+    <xs:element name="showProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="showProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Crear producto sin categoria-->
+    <xs:element name="addProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="1"/>
+                <xs:element name="description" type="xs:string" minOccurs="1"/>
+                <xs:element name="price" type="xs:double" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  CRUD  -->
+    <!--  CREATE  -->
+    <xs:element name="createProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="1"/>
+                <xs:element name="description" type="xs:string" minOccurs="1"/>
+                <xs:element name="price" type="xs:double" minOccurs="1"/>
+                <xs:element name="category" type="xs:string" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  READ  -->
+    <xs:element name="readProductsRequest">
+        <xs:complexType>
+
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="readProductsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="products" type="tns:product" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- UPDATE -->
+    <xs:element name="updateProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" minOccurs="1"/>
+                <xs:element name="name" type="xs:string" minOccurs="0"/>
+                <xs:element name="description" type="xs:string" minOccurs="0"/>
+                <xs:element name="price" type="xs:double" minOccurs="0"/>
+                <xs:element name="category" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DELETE  -->
+    <xs:element name="deleteProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Estructura de producto usada (Category opcional) -->
+    <xs:complexType name="product">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+            <xs:element name="category" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

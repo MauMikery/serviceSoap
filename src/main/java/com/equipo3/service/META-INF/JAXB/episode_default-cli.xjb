@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.05.29 a las 11:08:19 PM CST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://equipo3.com/clases">
+    <schemaBindings map="false">
+      <package name="com.equipo3.clases"/>
+    </schemaBindings>
+    <bindings scd="tns:showProductRequest">
+      <class ref="com.equipo3.clases.ShowProductRequest"/>
+    </bindings>
+    <bindings scd="tns:showProductResponse">
+      <class ref="com.equipo3.clases.ShowProductResponse"/>
+    </bindings>
+    <bindings scd="~tns:product">
+      <class ref="com.equipo3.clases.Product"/>
+    </bindings>
+    <bindings scd="tns:addProductRequest">
+      <class ref="com.equipo3.clases.AddProductRequest"/>
+    </bindings>
+    <bindings scd="tns:addProductResponse">
+      <class ref="com.equipo3.clases.AddProductResponse"/>
+    </bindings>
+    <bindings scd="tns:createProductRequest">
+      <class ref="com.equipo3.clases.CreateProductRequest"/>
+    </bindings>
+    <bindings scd="tns:createProductResponse">
+      <class ref="com.equipo3.clases.CreateProductResponse"/>
+    </bindings>
+    <bindings scd="tns:readProductsRequest">
+      <class ref="com.equipo3.clases.ReadProductsRequest"/>
+    </bindings>
+    <bindings scd="tns:readProductsResponse">
+      <class ref="com.equipo3.clases.ReadProductsResponse"/>
+    </bindings>
+    <bindings scd="tns:updateProductRequest">
+      <class ref="com.equipo3.clases.UpdateProductRequest"/>
+    </bindings>
+    <bindings scd="tns:updateProductResponse">
+      <class ref="com.equipo3.clases.UpdateProductResponse"/>
+    </bindings>
+    <bindings scd="tns:deleteProductRequest">
+      <class ref="com.equipo3.clases.DeleteProductRequest"/>
+    </bindings>
+    <bindings scd="tns:deleteProductResponse">
+      <class ref="com.equipo3.clases.DeleteProductResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
